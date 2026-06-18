@@ -36,7 +36,7 @@ const AdminProductsCard = () => {
         try {
             setApiStatus(apiStatusConstants.inProgress)
             
-            const response = await axios("http://localhost:5000/admin/products/", getAdminAuthConfig())
+            const response = await axios("https://chandra-silks-backend.onrender.com/admin/products/", getAdminAuthConfig())
             
             setProductsList(response.data)
             setApiStatus(apiStatusConstants.success)

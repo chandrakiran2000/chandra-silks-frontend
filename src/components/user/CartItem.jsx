@@ -19,7 +19,7 @@ const CartItem = (props) => {
 
     const updateQuantity = async (newQty) => {
         try {
-            const response = await axios.put(`http://localhost:5000/cart/${cart_id}`, {quantity: newQty}, getAuthConfig())
+            const response = await axios.put(`https://chandra-silks-backend.onrender.com/cart/${cart_id}`, {quantity: newQty}, getAuthConfig())
             setQty(newQty);
 
             setMessage(response.data)
@@ -55,7 +55,7 @@ const CartItem = (props) => {
                     return
                 }
     
-                const response = await axios.delete(`http://localhost:5000/cart/${cart_id}`,getAuthConfig())
+                const response = await axios.delete(`https://chandra-silks-backend.onrender.com/cart/${cart_id}`,getAuthConfig())
                 const data = response.data
     
                 setMessage(data)

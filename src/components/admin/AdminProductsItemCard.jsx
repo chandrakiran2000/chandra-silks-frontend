@@ -24,7 +24,7 @@ const AdminProductsItemCard = (props) => {
       if (!confirmDelete){return}
       
       try {
-        await axios.delete(`http://localhost:5000/admin/products/${id}`, getAdminAuthConfig())
+        await axios.delete(`https://chandra-silks-backend.onrender.com/admin/products/${id}`, getAdminAuthConfig())
         props.setMessage("Product deleted successfully")
         props.setSeverity("success")
         props.setOpenSnackbar(true)

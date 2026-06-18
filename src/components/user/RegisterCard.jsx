@@ -61,7 +61,7 @@ const RegisterCard = () => {
 
         try {
             const userData = {"name" : name, "mobile": mobile, "password": password}
-            const response = await axios.post("http://localhost:5000/register", userData)
+            const response = await axios.post("https://chandra-silks-backend.onrender.com/register", userData)
 
             const data = response.data
 

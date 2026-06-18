@@ -26,7 +26,7 @@ const ProductCard = (props) => {
     const handleAddToCart = async () => {
         try {
             const productData = {"userId": userData.id, productId: id, "quantity" : 1}
-            const response = await axios.post("http://localhost:5000/cart", productData, getAuthConfig())
+            const response = await axios.post("https://chandra-silks-backend.onrender.com/cart", productData, getAuthConfig())
 
             setSnackbarMsg(response.data)
             setSeverity("success")

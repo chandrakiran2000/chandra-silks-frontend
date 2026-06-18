@@ -24,7 +24,7 @@ const OrdersCard = () => {
 
     const getOrderItems = async() => {
         try {
-            const response = await axios.get(`http://localhost:5000/orders/${userData.id}`, getAuthConfig())
+            const response = await axios.get(`https://chandra-silks-backend.onrender.com/orders/${userData.id}`, getAuthConfig())
             const data = response.data
             if (data.length === 0){
                 setApiStatus(apiStatusConstants.failure)

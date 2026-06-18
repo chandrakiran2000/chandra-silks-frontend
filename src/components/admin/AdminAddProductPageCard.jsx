@@ -81,7 +81,7 @@ const AdminAddProductPageCard = () => {
             formData.append("image", imageFile)
 
 
-            const response = await axios.post('http://localhost:5000/admin/products', formData, getAdminAuthConfig()) 
+            const response = await axios.post('https://chandra-silks-backend.onrender.com/admin/products', formData, getAdminAuthConfig()) 
             
             const data = response.data
             

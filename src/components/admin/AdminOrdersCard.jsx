@@ -25,7 +25,7 @@ const AdminOrdersCard = () => {
     const getOrders = async() => {
         setApiStatus(apiStatusConstants.inProgress)
         try {
-            const response = await axios.get("http://localhost:5000/admin/orders", getAdminAuthConfig())
+            const response = await axios.get("https://chandra-silks-backend.onrender.com/admin/orders", getAdminAuthConfig())
             const data = response.data
             if (data.length === 0){
                 setApiStatus(apiStatusConstants.failure)

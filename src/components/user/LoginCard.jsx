@@ -53,7 +53,7 @@ const LoginCard = () => {
 
         try {
             const userData = {"mobile": mobile, "password": password}
-            const response = await axios.post("http://localhost:5000/login",userData)
+            const response = await axios.post("https://chandra-silks-backend.onrender.com/login",userData)
             const data = response.data
 
             

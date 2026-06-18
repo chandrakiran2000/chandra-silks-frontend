@@ -27,7 +27,7 @@ const ProductsCard = () => {
     const getProducts = async()=>{
         try {
             setApiStatus(apiStatusConstants.inProgress)
-            const response = await axios.get(`http://localhost:5000/products?search=${searchValue}&sort=${priceRange}`)
+            const response = await axios.get(`https://chandra-silks-backend.onrender.com/products?search=${searchValue}&sort=${priceRange}`)
             const data = response.data
             
 

@@ -34,7 +34,7 @@ const AdminEditProductPageCard = () => {
 
     const getProduct = async() => {
         try {
-            const response = await axios.get(`http://localhost:5000/admin/products/${id}`, getAdminAuthConfig())
+            const response = await axios.get(`https://chandra-silks-backend.onrender.com/admin/products/${id}`, getAdminAuthConfig())
             const data = response.data
             
             setName(data.name)
@@ -79,7 +79,7 @@ const AdminEditProductPageCard = () => {
         
         try{
             
-            const response = await axios.put(`http://localhost:5000/admin/products/${id}`, {name, price, description}, getAdminAuthConfig()) 
+            const response = await axios.put(`https://chandra-silks-backend.onrender.com/admin/products/${id}`, {name, price, description}, getAdminAuthConfig()) 
             
             const data = response.data
             

@@ -50,7 +50,7 @@ const AdminLoginCard = () => {
 
         try {
             const userData = {"mobile": mobile, "password": password}
-            const response = await axios.post("http://localhost:5000/admin/login", userData)
+            const response = await axios.post("https://chandra-silks-backend.onrender.com/admin/login", userData)
             const data = response.data
             
             Cookies.set("admin_jwt_token", data.token, {expires: 7, path: "/"})

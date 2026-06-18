@@ -26,7 +26,7 @@ const AdminCustomerCard = () => {
     const getUsers = async() => {
         setApiStatus(apiStatusConstants.inProgress)
         try {
-            const response = await axios.get("http://localhost:5000/admin/customers", getAdminAuthConfig())
+            const response = await axios.get("https://chandra-silks-backend.onrender.com/admin/customers", getAdminAuthConfig())
             const data = response.data
             
             if (data.length === 0){
