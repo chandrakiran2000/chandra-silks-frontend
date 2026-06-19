@@ -21,17 +21,21 @@ const OrderItem = (props) => {
             <Box
                 sx={{
                     width: "100%",
-                    display: "flex",
-                    alignItems: "center",
                     ml: 2,
-                }}
-                >
+                    display: "flex",
+                    flexDirection: {
+                        xs: "column",
+                        sm: "column",
+                        md: "row",
+                    },
+                    alignItems: {xs: "flex-start", sm: "flex-start", md: "center",}, gap: 1,
+                }}>
                
                 <Typography
                     sx={{
                     fontSize: "16px",
                     fontWeight: "bold",
-                    minWidth: "300px",
+                    width: "100%",
                     }}
                 >
                     {name}
@@ -40,27 +44,38 @@ const OrderItem = (props) => {
                 
                 <Box
                     sx={{
-                    flex: 1,
-                    display: "flex",
-                    justifyContent: "center",
-                    alignItems: "center",
-                    gap: 1,
+                        display: "flex",
+                        flexDirection: {
+                        xs: "column",
+                        sm: "column",
+                        md: "row",
+                        },
+                        justifyContent: {md: "space-between",},
+                        alignItems: {
+                        xs: "flex-start",
+                        sm: "flex-start",
+                        md: "space-between",
+                        },
+                        gap: 1,
+                        width: "100%",
                     }}
-                >
-                    <Typography>Quantity :</Typography>
-                    <Typography fontWeight="bold">{quantity}</Typography>
-                </Box>
+                    >
+                    <Box sx={{ display: "flex", gap: 1 }}>
+                        <Typography>Quantity :</Typography>
+                        <Typography fontWeight="bold">
+                        {quantity}
+                        </Typography>
+                    </Box>
 
-                <Typography
-                    sx={{
-                    width: "120px",
-                    textAlign: "right",
-                    fontWeight: 600,
-                    color: "#171f46",
-                    }}
-                >
-                    ₹ {price * quantity}
-                </Typography>
+                    <Typography
+                        sx={{
+                        fontWeight: 600,
+                        color: "#171f46",
+                        }}
+                    >
+                        ₹ {price * quantity}
+                    </Typography>
+                    </Box>
                 </Box>
 
         </Card>

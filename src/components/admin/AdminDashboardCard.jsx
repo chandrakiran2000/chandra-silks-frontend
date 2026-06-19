@@ -92,8 +92,7 @@ const AdminDashboardCard = () => {
                 sx={{
                     p: 3,
                     height: "170px",
-                    width: "260px",
-                    
+                    width: "200px",
                     borderRadius: 3,
                     bgcolor: "#fff",
                     display: "flex",

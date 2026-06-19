@@ -53,13 +53,15 @@ const AdminSideBar = () => {
   return (
     <Box
       sx={{
-        height: "100vh",
+        height: "100dvh",
+        minHeight: "100dvh",
         bgcolor: "#ffffff",
         borderRight: "1px solid #e2e8f0",
         transition: "width 0.3s",
         width: collapsed ? { xs: "70px", sm: "75px", md: "80px" } : { xs: "220px", sm: "260px", md: "280px" },
-        overflow: "hidden",
+        flexShrink: 0,
         display: "flex",
+        overflow:"hidden",
         flexDirection: "column", position: "sticky", top:0}}>
       {/* HEADER TOGGLE BUTTON */}
       <Box
@@ -78,7 +80,7 @@ const AdminSideBar = () => {
 </Box>
 
       {/* MENU ITEMS */}
-      <List >
+      <List sx={{ flexGrow: 1 }}>
         {adminMenu.map((item) => (
           <ListItem key={item.text} disablePadding sx={{ my: 0.5 }}>
             <Tooltip title={collapsed ? item.text : ""} placement="right">

@@ -3,7 +3,7 @@ import AdminSideBar from "../../components/admin/AdminSideBar";
 
 const AdminLayout = ({ children }) => {
   return (
-    <Box sx={{ display: "flex", minHeight: "100vh" }}>
+    <Box sx={{ display: "flex", minHeight: "100vh", width: "100%" }}>
 
       {/* LEFT SIDEBAR */}
       
@@ -13,8 +13,9 @@ const AdminLayout = ({ children }) => {
       <Box
         sx={{
           flex: 1,
-          p: 3,
-          overflowY: "auto",
+          width: "100%",
+          p: { xs: 2, md: 3 },
+          overflowY: "hidden",
         }}
       >
         {children}
