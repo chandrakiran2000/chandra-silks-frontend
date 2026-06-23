@@ -9,7 +9,7 @@ const AdminLogin = () => {
     
 
     return(
-        <Box sx={{minHeight: "100vh",minWidth: '100%', px:2, py:2, display: 'flex', flexDirection:'column', justifyContent: 'center', alignItems: 'center'}}>
+        <Box sx={{minHeight: "100svh",minWidth: '100%', px:2, py:2, display: 'flex', flexDirection:'column', justifyContent: 'center', alignItems: 'center'}}>
             <AdminLoginCard />
         </Box>
     )

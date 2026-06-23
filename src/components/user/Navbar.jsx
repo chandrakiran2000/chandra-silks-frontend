@@ -47,7 +47,7 @@ const Navbar = () => {
 
     return(
         <AppBar position="sticky" sx={{top: 0 , left: 0, right: 0, bgcolor: ' #ffffff', color: "#475569", boxShadow: "0 2px 10px rgba(0,0,0,0.05)"}}>
-          <Container maxWidth="xl">
+          <Container maxWidth="xll">
             <Toolbar disableGutters sx={{ minHeight: 64 }}>
               <Box
                 component={NavLink}

@@ -53,8 +53,8 @@ const AdminSideBar = () => {
   return (
     <Box
       sx={{
-        height: "100dvh",
-        minHeight: "100dvh",
+        height: "100svh",
+        minHeight: "100svh",
         bgcolor: "#ffffff",
         borderRight: "1px solid #e2e8f0",
         transition: "width 0.3s",

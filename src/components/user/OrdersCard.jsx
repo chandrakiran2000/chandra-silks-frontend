@@ -24,6 +24,7 @@ const OrdersCard = () => {
 
     const getOrderItems = async() => {
         try {
+            setApiStatus(apiStatusConstants.inProgress)
             const response = await axios.get(`https://chandra-silks-backend.onrender.com/orders/${userData.id}`, getAuthConfig())
             const data = response.data
             if (data.length === 0){

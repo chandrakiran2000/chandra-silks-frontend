@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import { useNavigate } from 'react-router-dom';
 import {Box, Stack, Card, CardContent, Avatar, Typography, CardMedia, CardActions, Button} from '@mui/material'
 import Snackbar from "@mui/material/Snackbar";
 import Alert from "@mui/material/Alert";
@@ -10,7 +11,9 @@ import axios from 'axios';
 import { getAuthConfig } from "../../utils/auth"
 
 
+
 const ProductCard = (props) => {
+    const navigate = useNavigate ()
     const {id, name, price, description, image_url} = props.productList
 
     const [openSnackbar, setOpenSnackbar] = useState(false)
@@ -37,17 +40,19 @@ const ProductCard = (props) => {
             setOpenSnackbar(true)
         }
     }
+    
     return(
         <>
         <Card sx={{p: 2,width: "100%", maxWidth: 300,  minHeight: 420, flexShrink: 1,  borderRadius: 4, bgcolor: "#ffffff", boxShadow: "0 4px 12px rgba(0,0,0,0.08)", "&:hover": { boxShadow: "0 6px 18px rgba(0,0,0,0.15)"}, display: "flex", flexDirection: "column"}}>
             <CardMedia
                 component="img"
                 alt={name}
+                onClick={() => navigate(`/products/${id}`)}
                 image={image_url}
-                sx={{ width: "100%", height: 250, borderRadius: "12px", objectFit: "cover",  }}
+                sx={{ width: "100%", height: 250, borderRadius: "12px", objectFit: "cover",  cursor: "pointer"}}
             />
             
-            <CardContent sx={{flexGrow: 1, px: 1, py: 1,}}>
+            <CardContent onClick={() => navigate(`/products/${id}`)}  sx={{flexGrow: 1, px: 1, py: 1, cursor: "pointer"}}>
                 <Typography variant="h6" align="start" sx={{ mt: 1.5, mb: 0.5, fontSize: "20px", fontFamily: "'Poppins', sans-serif", fontWeight: 300, color: "#111827", overflow: "hidden", textOverflow: "ellipsis", whiteSpace: "nowrap" }}>
                     {name}
                 </Typography>

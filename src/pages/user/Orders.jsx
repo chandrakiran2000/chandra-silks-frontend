@@ -1,7 +1,6 @@
 import {Box, Stack, Typography} from '@mui/material'
 import OrdersCard from '../../components/user/OrdersCard'
-import Loader from '../../components/user/Loader';
-import FailureView from '../../components/user/FailureView';
+
 
 
 

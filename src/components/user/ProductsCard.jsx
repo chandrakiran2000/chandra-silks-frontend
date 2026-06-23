@@ -74,7 +74,7 @@ const ProductsCard = () => {
 
     const renderProducts = () => {
         return(
-        <Grid container justifyContent='center' alignItems='center' alignSelf='center' spacing={3} columns={12} sx={{maxWidth: 1300, mx: "auto", px: 2,}}>
+        <Grid container justifyContent='center' alignItems='center' alignSelf='center' spacing={3} columns={12} sx={{mx: "auto", px: 2,}}>
             {
                 products.map(eachproduct => (
                     <Grid item xs={12} sm={6} md={6} lg={4}  xl={3} key={eachproduct.id}>

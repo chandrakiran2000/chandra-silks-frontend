@@ -6,6 +6,7 @@ import Navbar from './components/user/Navbar'
 import Footer from "./components/user/Footer"
 
 import Home from './pages/user/Home'
+import ProductDetails from "./pages/user/ProductDetails";
 import Cart from './pages/user/Cart'
 import Orders from './pages/user/Orders'
 import Login from './pages/user/Login'
@@ -41,6 +42,16 @@ const  App =() => {
           <>
             <Navbar />
             <Home />
+            <Footer />
+          </>
+          </UserProtectedRoute>
+        }/>
+
+        <Route path="/products/:id" element={
+          <UserProtectedRoute>
+          <>
+            <Navbar />
+            <ProductDetails />
             <Footer />
           </>
           </UserProtectedRoute>
